@@ -1,45 +1,65 @@
-# RevCharts
+# LayoutGenerator
 
-**DynamicChart Component**
-The DynamicChart component provides a flexible and interactive charting solution using Chart.js and Vue.js. It allows users to fetch data from an API, configure chart settings, and save/load configurations.
+The **LayoutGenerator** component provides a flexible and interactive layout solution for creating customizable page layouts using Vue.js. It allows users to define the number of columns in each row dynamically and generate a corresponding HTML and CSS layout template.
 
-**Features**
-- **Fetch Data from API**: This Vue 3 library dynamically creates and updates Charts based on API calls.
-- **Input field for entering an API URL**: Fetches data from the provided URL and visualizes it as a chart.
-- **Chart Type Selection**: Dropdown menu to select from various chart types:
-Bar Chart
-Line Chart
-Pie Chart
-Doughnut Chart
-Radar Chart
-Polar Area Chart
-Chart Configuration
+## Features
 
-- **Title**: Input field for setting the chart title.
-- **Customize Color**: Input field for specifying the chart color (in RGBA format).
-- **Save and Load Configuration**: Save current chart configuration (API URL, chart type, title, color) to localStorage.
-- **Load Configuration**: Load saved chart configuration from localStorage.
-- **Retry**: Retry button to attempt fetching data again if the initial attempt fails.
-- **Download Chart**: Download the displayed chart as a PNG image.
-- **Error Handling**: Shows error messages if data fetching fails or if the data format is invalid.
-- **Responsive Design**: The chart and controls are responsive and adapt to different screen sizes.
+- **Dynamic Layout Creation**: Users can specify the number of columns for each row, and the component will generate the corresponding HTML and CSS for the layout.
+  
+- **Interactive UI**: 
+  - **Add New Rows**: Easily add new rows with customizable column counts.
+  - **Real-time Updates**: See immediate changes in the layout as you adjust the number of columns.
 
+- **Customizable Styles**:
+  - **Column Styling**: Each column in the generated layout has basic styling for padding and borders.
+  - **Responsive Design**: The generated layout is flexible and adapts to various screen sizes.
+
+- **Generated Code**:
+  - **HTML Template**: Displays the generated HTML code for the layout.
+  - **CSS Styles**: Shows the generated CSS styles to replicate the layout design.
+
+- **Copy Code**: Users can easily copy the generated HTML and CSS code for use in other projects.
+
+- **Error Handling**: Ensures that user inputs are validated and that appropriate messages are displayed if any issues arise.
+
+## Usage
+
+1. **Specify Number of Columns**: Enter the number of columns for each row in the form fields.
+2. **Add More Rows**: Click the "Add Another Row" button to include additional rows with customizable columns.
+3. **Generate Template**: Click the "Generate Template" button to see the generated HTML and CSS code.
+4. **Copy Code**: Use the provided code for integration into your projects.
+
+## Example
+
+**Generated HTML:**
+
+```html
+<div class="row row-1">
+  <div class="column col-1-1">Fake text</div>
+  <div class="column col-1-2">Fake text</div>
+</div>
+<div class="row row-2">
+  <div class="column col-2-1">Fake text</div>
+  <div class="column col-2-2">Fake text</div>
+  <div class="column col-2-3">Fake text</div>
+</div>
+
+```
 ## Screenshot
 
-![Screenshot](revCharts.jpg)
+![Screenshot](layoutgenerator.jpg)
 
 
 
 ## Installation
 
 ```sh
-npm i dynamiccharts
+npm i layoutgenerator
 
-import dynamiccharts from 'dynamiccharts'
-import "dynamiccharts/dist/style.css";
+import layoutgenerator from 'layoutgenerator'
+import "layoutgenerator/dist/style.css";
 
-<dynamiccharts />
+<layoutgenerator />
 
-give any Json Api Address in checkbox like this 'https://jsonplaceholder.typicode.com/posts' and click Fetch
 
 
