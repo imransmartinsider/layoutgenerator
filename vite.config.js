@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: './src/index.js',
-      name: 'layoutegenerator',
-      fileName: (format) => `layoutegenerator.${format}.js`
+      name: 'layoutgenerator',
+      fileName: (format) => `layoutgenerator.${format}.js`
     },
     rollupOptions: {
       // Make sure to externalize deps that shouldn't be bundled into your library
